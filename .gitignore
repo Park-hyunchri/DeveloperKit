@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+TestResults/
+packages/
+publish/
+*.log
