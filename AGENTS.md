@@ -1,5 +1,24 @@
 # AGENTS.md
 
+## 프로젝트 자동 분석
+
+DeveloperKit 적용 요청을 받으면
+
+먼저 프로젝트 종류를 분석한다.
+
+예)
+
+- WinForms
+- WPF
+- MVVM
+- Console
+- ASP.NET
+- Class Library
+
+프로젝트 구조는 변경하지 않는다.
+
+분석 결과에 맞는 AGENTS.md를 생성한다.
+
 ## 기본 원칙
 
 - 항상 한국어로 답변한다.
@@ -40,8 +59,53 @@ git diff
 
 `reset`, `clean`, `restore`, 강제 push는 별도 승인을 받는다.
 
-## DeveloperKit
+## DeveloperKit Workspace
 
-이 프로젝트는 DeveloperKit 표준을 따른다.
+DeveloperKit과 현재 프로젝트가 동일한 VS Code Workspace에 열려 있다고 가정한다.
 
-DeveloperKit 적용 요청을 받으면 APPLY_DEVELOPERKIT.md 규칙에 따라 동작한다.
+사용자가
+
+"DeveloperKit 적용해줘."
+
+라고 요청하면
+
+DeveloperKit 적용 요청을 받으면
+
+1.
+현재 프로젝트 종류 분석
+
+2.
+Git 저장소 여부 확인
+
+3.
+DeveloperKit 문서 존재 여부 확인
+
+4.
+없는 문서만 생성
+
+5.
+기존 문서는 덮어쓰지 않음
+
+6.
+프로젝트에 맞게 템플릿 자동 수정
+
+7.
+생성 계획 보고
+
+8.
+사용자 승인
+
+9.
+생성
+
+10.
+git diff 보고
+
+기존 파일은 덮어쓰지 않는다.
+
+## v1.1 템플릿 규칙
+
+- 공통 템플릿은 `templates/common`에서 관리한다.
+- 유형별 템플릿은 WinForms, WPF, ASP.NET, Console, Class Library 폴더에서 관리한다.
+- 적용 전 `.csproj`를 읽기 전용으로 분석하고, 없는 파일만 생성한다.
+- 대상 프로젝트의 소스, `.csproj`, NuGet, 빌드 설정은 변경하지 않는다.

@@ -29,3 +29,14 @@
 - Commit:
 - Push:
 - 남은 작업:
+
+### 2026-09-11 - DeveloperKit v1.1 구조 적용
+
+- 목적: 신규 프로젝트 적용을 위한 유형별 템플릿과 자동 적용 도구 추가
+- 원인: 기존 저장소에 유형 감지 및 누락 파일 적용 구조가 없음
+- 수정 파일: `VERSION`, `README.md`, `AGENTS.md`, `APPLY_DEVELOPERKIT.md`, `WORKLOG.md`, `CODEX_HANDOFF.md`
+- 생성 파일: `templates` 및 `scripts` 하위 파일
+- 영향 범위: 문서·템플릿·PowerShell 도구만 변경
+- 빌드 결과: 실행 소스와 프로젝트 파일이 없어 애플리케이션 빌드 없음
+- 테스트 결과: PowerShell 구문 검사 및 임시 프로젝트 적용 검증 완료
+- Git Status: 커밋하지 않음

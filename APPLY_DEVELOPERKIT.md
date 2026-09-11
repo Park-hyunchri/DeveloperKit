@@ -1,5 +1,9 @@
 # APPLY_DEVELOPERKIT.md
 
+DeveloperKit은 현재 Workspace에 열려 있다고 가정한다.
+
+DeveloperKit v1.1에서는 `.csproj`를 읽기 전용으로 분석하여 프로젝트 유형을 판별하고 `templates/common`과 해당 유형 템플릿을 사용한다.
+
 Codex 적용 규칙
 
 "DeveloperKit 적용해줘."
@@ -57,3 +61,5 @@ NuGet은 수정하지 않는다.
 ## 10
 
 생성 후 git diff 기준으로 변경 내용을 보고한다.
+
+필요한 경우 `scripts/Apply-DeveloperKit.ps1`을 사용한다. 이 도구는 없는 파일만 생성하며 소스, `.csproj`, NuGet, 빌드 설정은 변경하지 않는다.

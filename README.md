@@ -1,4 +1,4 @@
-# DeveloperKit
+# DeveloperKit v1.1
 
 이 저장소는 모든 프로젝트의 표준 개발환경이다.
 
@@ -24,3 +24,11 @@ C# / WPF / MVVM 운영 프로젝트를 위한 공통 개발 규칙과 문서 템
 - 아키텍처·변경 이력·문제 해결·고객별 커스터마이징 문서
 
 프로젝트에 복사한 뒤 각 프로젝트의 실제 구조와 환경에 맞게 내용을 보완하세요.
+
+## v1.1 구조
+
+- `templates/common`: 공통 문서 및 VS Code 설정
+- `templates/winforms`, `wpf`, `aspnet`, `console`, `classlibrary`: 프로젝트 유형별 규칙
+- `scripts`: 유형 감지 및 기존 파일을 덮어쓰지 않는 누락 파일 적용 도구
+
+버전은 `VERSION`에서 관리합니다.
