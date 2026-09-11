@@ -39,3 +39,9 @@ git diff
 ```
 
 `reset`, `clean`, `restore`, 강제 push는 별도 승인을 받는다.
+
+## DeveloperKit
+
+이 프로젝트는 DeveloperKit 표준을 따른다.
+
+DeveloperKit 적용 요청을 받으면 APPLY_DEVELOPERKIT.md 규칙에 따라 동작한다.
