@@ -2,7 +2,7 @@
 
 DeveloperKit은 현재 Workspace에 열려 있다고 가정한다.
 
-DeveloperKit v1.1에서는 `.csproj`를 읽기 전용으로 분석하여 프로젝트 유형을 판별하고 `templates/common`과 해당 유형 템플릿을 사용한다.
+DeveloperKit v2.0에서는 `.csproj`를 읽기 전용으로 분석하여 프로젝트 유형을 판별하고 `templates/common`과 해당 유형 템플릿을 사용한다.
 
 Codex 적용 규칙
 
@@ -27,12 +27,16 @@ DeveloperKit과 비교한다.
 - CODEX_HANDOFF.md
 - DEV_STATE.md
 - README_DEVELOPER.md
+- 배포방법.md
+- WORK_CHECKLIST.md
+- CODEX_PROMPT.md
 - .vscode/settings.json
 - .vscode/extensions.json
 - docs/Architecture.md
 - docs/ChangeHistory.md
 - docs/Troubleshooting.md
 - docs/Customer_Customizing.md
+- docs/OperationalStandards.md
 
 ## 4
 
@@ -62,4 +66,6 @@ NuGet은 수정하지 않는다.
 
 생성 후 git diff 기준으로 변경 내용을 보고한다.
 
-필요한 경우 `scripts/Apply-DeveloperKit.ps1`을 사용한다. 이 도구는 없는 파일만 생성하며 소스, `.csproj`, NuGet, 빌드 설정은 변경하지 않는다.
+필요한 경우 먼저 `scripts/Apply-DeveloperKit.ps1 -WhatIf`로 생성 계획을 확인한 뒤 승인 후 적용한다. 이 도구는 없는 파일만 생성하며 소스, `.sln`, `.csproj`, NuGet, 빌드 설정은 변경하지 않는다.
+
+적용 후에는 `scripts/Test-DeveloperKit.ps1`로 필수 문서와 v2.0 핵심 정책 포함 여부를 읽기 전용으로 점검한다.
